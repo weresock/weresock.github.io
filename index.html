@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tracker</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <!-- <script data-main="scripts/main" src="scripts/require.js"></script> -->
+
+  </head>
+  <body>
+    <h1>Essence</h1>
+    <p id="essencePool"></p>
+
+    <!-- <button id="neg5">-5</button>   
+    <button id="neg1">-1</button>
+    <button id="add1">+1</button>
+    <button id="add5">+5</button> -->
+
+        <table style>
+          <tr>
+            <th>Personal</td>
+            <td> </td>
+            <td id="personalCurrent"></td>
+            <td>/</td>
+            <td id="personalMax"></td>
+          </tr>
+          <tr>    
+          <td>Peripheral</td>
+          <td> </td>
+          <td id="peripheralCurrent"></td>
+          <td>/</td>
+          <td id="peripheralMax"></td>
+  
+          </tr>
+        </table>
+      <button class="accordion">Manual</button>
+      <div class="panel">
+          <input type="button" id="test2" onclick="essEdit(personal,-5)" value="🧍‍♂️-5">
+          <input type="button" id="test2" onclick="essEdit(personal,-3)" value="🧍‍♂️-3">
+          <input type="button" id="test2" onclick="essEdit(personal,-1)" value="🧍‍♂️-1">
+          <input type="button" id="test2" onclick="essEdit(personal,1)" value="🧍‍♂️+1">
+          <input type="button" id="test2" onclick="essEdit(personal,3)" value="🧍‍♂️+3">
+          <input type="button" id="test2" onclick="essEdit(personal,5)" value="🧍‍♂️+5">  
+          </br>
+          <input type="button" id="test1" onclick="essEdit(peripheral,-5)" value="☀ -5">
+          <input type="button" id="test1" onclick="essEdit(peripheral,-3)" value="☀ -3">
+          <input type="button" id="test1" onclick="essEdit(peripheral,-1)" value="☀ -1">
+          <input type="button" id="test1" onclick="essEdit(peripheral,1)" value="☀ +1">
+          <input type="button" id="test1" onclick="essEdit(peripheral,3)" value="☀ +3">
+          <input type="button" id="test1" onclick="essEdit(peripheral,5)" value="☀ +5">
+      </div>
+      
+
+    
+    
+    
+
+    </br>
+  </br>
+    <div class = "centre">
+      <input type="button" id="recover1" onclick="recover(1)" value="+1">
+      <input type="button" id="recover5" onclick="recover(5)" value="+5">
+      <input type="button" id="recoverall" onclick="recover(500)" value="All">
+      </br>
+      <input type="button" id="test2" onclick="essEdit(personal,-5)" value="🧍‍♂️-5">
+      <input type="button" id="test2" onclick="essEdit(personal,-3)" value="🧍‍♂️-3">
+      <input type="button" id="test2" onclick="essEdit(personal,-1)" value="🧍‍♂️-1">
+      </br>
+      <input type="button" id="test1" onclick="essEdit(peripheral,-5)" value="☀ -5">
+      <input type="button" id="test1" onclick="essEdit(peripheral,-3)" value="☀ -3">
+      <input type="button" id="test1" onclick="essEdit(peripheral,-1)" value="☀ -1">
+    </div>
+    <h2>Committed</h2>
+    <form action="/my-handling-form-page" method="post">
+        <table style>
+            <tr>
+                <th>x</th>
+                <th>Pers.</th>
+                <th>Peri.</th>
+                <th>Cost</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <th><input type="radio" id="no" name="ability1" onclick="setCommit('belt','not')" value="no" checked /></th>
+                <th><input type="radio" id="personal" name="ability1" onclick="setCommit('belt','pers')" value="personal"/></th>
+                <th><input type="radio" id="peripheral" name="ability1" onclick="setCommit('belt','peri')" value="peripheral"/></th>
+                <th>5</th>
+                <th>belt</th>
+                
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="harmoniousPresence5" onclick="setCommit('harmoniousPresence5','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="harmoniousPresence5" onclick="setCommit('harmoniousPresence5','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="harmoniousPresence5" onclick="setCommit('harmoniousPresence5','peri')" value="peripheral"/></th>
+              <th>5</th>
+              <th>Harmonious Presence Meditation 5</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="harmoniousPresence7" onclick="setCommit('harmoniousPresence7','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="harmoniousPresence7" onclick="setCommit('harmoniousPresence7','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="harmoniousPresence7" onclick="setCommit('harmoniousPresence7','peri')" value="peripheral"/></th>
+              <th>7</th>
+              <th>Harmonious Presence Meditation 7</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="ignored1" onclick="setCommit('ignored1','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="ignored1" onclick="setCommit('ignored1','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="ignored1" onclick="setCommit('ignored1','peri')" value="peripheral"/></th>
+              <th>3</th>
+              <th>Easily-Overlooked Presence Method</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="cranestance" onclick="setCommit('cranestance','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="cranestance" onclick="setCommit('cranestance','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="cranestance" onclick="setCommit('cranestance','peri')" value="peripheral"/></th>
+              <th>3</th>
+              <th>Graceful Crane Stance</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="disguise1" onclick="setCommit('disguise1','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="disguise1" onclick="setCommit('disguise1','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="disguise1" onclick="setCommit('disguise1','peri')" value="peripheral"/></th>
+              <th>6</th>
+              <th>Flawlessly Impenetrable Disguise</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="ebonform" onclick="setCommit('ebonform','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="ebonform" onclick="setCommit('ebonform','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="ebonform" onclick="setCommit('ebonform','peri')" value="peripheral"/></th>
+              <th>8</th>
+              <th>Ebon Shadow Form</th>
+            </tr>
+            <tr>
+              <th><input type="radio" id="no" name="shadowform" onclick="setCommit('shadowform','not')" value="no" checked /></th>
+              <th><input type="radio" id="personal" name="shadowform" onclick="setCommit('shadowform','pers')" value="personal"/></th>
+              <th><input type="radio" id="peripheral" name="shadowform" onclick="setCommit('shadowform','peri')" value="peripheral"/></th>
+              <th>8</th>
+              <th>Belt: Shadowform</th>
+            </tr>
+
+
+
+        </table>    
+
+    </form>
+
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>  
+  <script src="main.js"></script>
+  </body>
+</html>
+
+
